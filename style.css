@@ -1,0 +1,58 @@
+html, body
+  height 100%
+  
+@keyframes anim
+  0%
+    transform: translateX(-100px) rotate(0deg)
+  50%
+    transform: translateX(100px) rotate(360deg)
+  100%
+    transform: translateX(-100px) rotate(0deg)
+    
+.wrap
+  display flex
+  width 100%
+  height 100%
+  justify-content center
+  align-items center
+    
+.card
+  position absolute
+  width 40px
+  height 72px
+  border-radius 0.8rem
+  animation-name anim
+  animation-duration 2.4s
+  animation-iteration-count infinite
+  animation-timing-function ease-in-out
+  
+delay=40ms
+  
+.card:nth-of-type(6n+1)
+  background #ffea4b
+
+.card:nth-of-type(6n+2)
+  background #ffc63a
+  animation-delay delay
+  z-index -10
+  
+.card:nth-of-type(6n+3)
+  background #ee9024
+  animation-delay delay*2
+  z-index -20
+  
+.card:nth-of-type(6n+4)
+  background #ef532c
+  animation-delay delay*2.5
+  z-index -30
+  
+.card:nth-of-type(6n+5)
+  background #c11943
+  animation-delay delay*3
+  z-index -40
+  
+.card:nth-of-type(6n+6)
+  background #c11943
+  animation-delay delay*3.25
+  z-index -50
+  
